@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@color/light_gray"> <!-- Change background color -->
+
+    <include
+        layout="@layout/toolbar_layout"
+        android:id="@+id/toolbar_layout" />
+
+    <TextView
+        android:id="@+id/itemCountTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbar_layout"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="342dp"
+        android:layout_marginBottom="8dp"
+        android:text="Count: 0"
+        android:textColor="@color/dark_blue" <!-- Change text color -->
+    android:textSize="18sp" <!-- Increase text size -->
+    android:textStyle="bold" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/itemCountTextView" <!-- Adjust layout_below attribute -->
+    android:layout_marginTop="16dp" <!-- Increase margin top -->
+    android:clipToPadding="false"
+    android:padding="12dp" <!-- Increase padding -->
+    android:background="@drawable/rounded_corners_bg"> <!-- Add rounded corners background -->
+
+</androidx.recyclerview.widget.RecyclerView>
+
+    </RelativeLayout>
